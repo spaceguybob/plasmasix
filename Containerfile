@@ -32,7 +32,7 @@ COPY --from=ghcr.io/ublue-os/bling:latest /modules /tmp/modules/
 # Custom modules overwrite defaults
 COPY modules /tmp/modules/
 
-RUN rpm-ostree install https://repos.fyralabs.com/terrarawhide/terra-release-0:40-1.noarch.rpm
+RUN rpm-ostree install https://repos.fyralabs.com/terra39/terra-release-0:39-2.noarch.rpm
 
 #RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfus>
 

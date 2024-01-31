@@ -50,7 +50,8 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install: - org.gnome.Loupe
+      install: 
+               - org.gnome.Loupe
                - com.alientrap.nexuiz-classic
                - com.github.GradienceTeam.Gradience
                - com.github.huluti.Curtail

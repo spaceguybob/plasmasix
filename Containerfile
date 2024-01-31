@@ -9,8 +9,8 @@
 # does nothing if the image is built in the cloud.
 
 # !! Warning: changing these might not do anything for you. Read comment above.
-ARG IMAGE_MAJOR_VERSION=39
-ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
+ARG IMAGE_MAJOR_VERSION=rawhide
+ARG BASE_IMAGE_URL=quay.io/fedora-ostree-desktops/kinoite
 
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 
@@ -31,6 +31,10 @@ COPY config /tmp/config/
 COPY --from=ghcr.io/ublue-os/bling:latest /modules /tmp/modules/
 # Custom modules overwrite defaults
 COPY modules /tmp/modules/
+
+RUN rpm-ostree install https://repos.fyralabs.com/terrarawhide/terra-release-0:40-1.noarch.rpm
+
+RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfus>
 
 # `yq` is used for parsing the yaml configuration
 # It is copied from the official container image since it's not available as an RPM.

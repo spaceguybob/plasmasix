@@ -34,7 +34,7 @@ COPY modules /tmp/modules/
 
 RUN rpm-ostree install https://repos.fyralabs.com/terrarawhide/terra-release-0:40-1.noarch.rpm
 
-RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfus>
+#RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfus>
 
 # `yq` is used for parsing the yaml configuration
 # It is copied from the official container image since it's not available as an RPM.

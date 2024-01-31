@@ -24,8 +24,20 @@ modules:
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-      # - micro
-      # - starship
+       - micro
+       - fish
+       - btop
+       - cargo
+       - pipx
+       - adw-gtk3-theme
+       - fira-code-fonts
+       - irqbalance
+       - profile-sync-daemon  
+       - prelockd
+       - preload
+       - corectrl
+       - prismlauncher
+       - armcord
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -37,7 +49,55 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install: # - org.gnome.Loupe
+      install: - org.gnome.Loupe
+               - com.alientrap.nexuiz-classic
+               - com.github.GradienceTeam.Gradience
+               - com.github.huluti.Curtail
+               - com.github.marhkb.Pods
+               - com.github.rafostar.Clapper
+               - com.github.tchx84.Flatseal
+               - com.github.unrud.VideoDownloader
+               - com.github.wwmm.easyeffects
+               - com.mattjakeman.ExtensionManager
+               - com.obsproject.Studio
+               - com.spotify.Client
+               - io.github.giantpinkrobots.flatsweep
+               - io.lmms.LMMS
+               - net.cubers.assault.AssaultCube
+               - net.davidotek.pupgui2
+               - net.waterfox.waterfox
+               - org.bluesabre.MenuLibre
+               - org.gimp.GIMP
+               - org.gnome.Calculator
+               - org.gnome.Calendar
+               - org.gnome.Characters
+               - org.gnome.Contacts
+               - org.gnome.Epiphany
+               - org.gnome.Evince
+               - org.gnome.Loupe
+               - org.gnome.Maps
+               - org.gnome.Music
+               - org.gnome.Snapshot
+               - org.gnome.TextEditor
+               - org.gnome.Totem
+               - org.gnome.Weather
+               - org.gnome.clocks
+               - org.gnome.font-viewer
+               - org.gustavoperedo.FontDownloader
+               - org.kde.kdenlive
+               - org.kde.krita
+               - org.mozilla.firefox
+               - org.sauerbraten.Sauerbraten
+               - org.srb2.SRB2
+               - org.srb2.SRB2Kart
+               - org.supertuxproject.SuperTux
+               - org.xonotic.Xonotic
+               - page.codeberg.libre_menu_editor.LibreMenuEditor
+               - pm.mirko.Atoms
+               - org.gtk.Gtk3theme.adw-gtk3
+               - org.gtk.Gtk3theme.adw-gtk3-dark
+               - org.freedesktop.Platform.VulkanLayer.gamescope//23.08
+               - org.freedesktop.Platform.ffmpeg-full//23.08         
 
       # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
